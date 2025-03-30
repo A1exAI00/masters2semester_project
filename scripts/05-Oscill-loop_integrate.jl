@@ -84,7 +84,7 @@ end
 
 # Set xlabel and ylabel for plot
 plot_xlabel = if dimentional "t" else "τ" end
-plot_ylabel = if dimentional "Iₙ" else "vₙ" end
+plot_ylabel = if dimentional "Iₙ" else "uₙ" end
 
 # Set a title for plot
 plot_title = ""
@@ -112,7 +112,7 @@ Y, t = trajectory(system, t_end; Δt=t_end/10000)
 #########################################################################################
 
 
-p1 = plot(title=curr_title,
+p1 = plot(title=plot_title,
     titlefontsize=10,
     xlabel=plot_xlabel, ylabel=plot_ylabel, 
     label=nothing,
